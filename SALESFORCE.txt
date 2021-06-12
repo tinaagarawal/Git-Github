@@ -1,0 +1,22 @@
+#Program for salesforce
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Salesforcelocators {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//chromedriver.exe
+		System.setProperty("webdriver.chrome.driver", "C:\\TINA\\selenium\\chromedriver_win32\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://www.salesforce.com/");
+	driver.findElement(By.linkText("https://login.salesforce.com/?locale=in")).click();
+	driver.findElement(By.id("username")).sendKeys("Agatin01");
+	driver.findElement(By.name("pw")).sendKeys("agatin01");
+	driver.findElement(By.className("button r4 wide primary")).click();
+
+	}
+
+}
